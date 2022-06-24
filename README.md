@@ -1,6 +1,10 @@
 # Gegevensmagazijn.ts
-A simple typescript/javascript wrapper for the Dutch : House of Representatives OData API
+> https://www.npmjs.com/package/@nowarries/gegevensmagazijn.ts
 
+![npm](https://img.shields.io/npm/dt/@nowarries/gegevensmagazijn.ts?style=for-the-badge)
+![NPM](https://img.shields.io/npm/l/@nowarries/gegevensmagazijn.ts?style=for-the-badge)
+
+A simple typescript/javascript wrapper for the Dutch : House of Representatives OData API
 
 ## Table of Contents
 
@@ -231,7 +235,7 @@ gegevensmagazijn.selectAll('Besluit', {
   filter: [
     ["BesluitSoort eq 'Ingediend'"] // where BesluitSoort equals ingediend
   ],
-  order: ["Status", "asc"] // Sort by attribute afkorting ascending
+  order: ["Status", "asc"] // Sort by attribute status ascending
 })
 ```
 
