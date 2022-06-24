@@ -240,8 +240,7 @@ gegevensmagazijn.selectAll('Besluit', {
 ```
 
 URL that is generated for you :
-> `https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Besluit?$top=1&$orderby=Status asc&$filter=( BesluitSoort eq 'Ingediend' )&$sel
-ect=BesluitSoort&$expand=Zaak($select=Onderwerp)`
+> `https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Besluit?$top=1&$orderby=Status asc&$filter=( BesluitSoort eq 'Ingediend' )&$select=BesluitSoort&$expand=Zaak($select=Onderwerp)`
 
 ## Dependency
 This project is dependent on:
