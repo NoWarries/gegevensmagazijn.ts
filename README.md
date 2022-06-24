@@ -62,8 +62,8 @@ gegevensmagazijn.selectAll('Stemming', {
 ```
 More on these [options](#options) below
 
-#### selectAll(request, settings?)
-`selectAll` as you might've guessed will get all information relevant to the given Query.
+#### select(request, identifer, settings?)
+`select` will get all information relevant to the given Entity and its identifier.
 
 A request might look like this
 ```typescript
