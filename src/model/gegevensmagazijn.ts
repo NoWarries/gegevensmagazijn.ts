@@ -34,7 +34,6 @@ export class Gegevensmagazijn {
   public select(request: string, identifier: string, settings?: Query): Promise<unknown> {
     const queryString = processSettings(settings).toString();
     const thisRequestURL = `${this.provider.url}${request}/${identifier}?${queryString}`;
-    console.log(thisRequestURL);
     return fetch(`//${thisRequestURL}`).then((res) => {
       if (res.status === 400) {
         res.json().then((err => { throw new Error(err.error.message); }));

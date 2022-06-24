@@ -3,7 +3,7 @@ import { Query } from '../model/query';
 function processSettings(settings: Query): Query {
 
   const thisQuery = new Query(); // setup query
-  if (settings === null) {
+  if (settings === undefined || settings === null) {
     return thisQuery;
   }
 

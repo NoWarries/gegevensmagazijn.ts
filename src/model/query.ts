@@ -11,7 +11,7 @@ export class Query {
   filter?: Array<string>;
   select?: Array<string>;
 
-  custom?: string;
+  custom?: any;
 
   public toString(): string {
     let output = '';

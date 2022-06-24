@@ -1,6 +1,7 @@
 {
   "name": "@nowarries/gegevensmagazijn.ts",
-  "version": "0.7.5",
+  "description": "A simple typescript/javascript wrapper for the Dutch : House of Representatives OData API",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
@@ -12,7 +13,6 @@
     "build:dev": "npx tsc -w"
   },
   "dependencies": {
-    "@nowarries/gegevensmagazijn.ts": "^0.7.5",
     "cross-fetch": "^3.1.5"
   },
   "devDependencies": {
@@ -36,6 +36,5 @@
   "bugs": {
     "url": "https://github.com/NoWarries/gegevensmagazijn.ts/issues"
   },
-  "homepage": "https://github.com/NoWarries/gegevensmagazijn.ts#readme",
-  "description": ""
+  "homepage": "https://github.com/NoWarries/gegevensmagazijn.ts#readme"
 }

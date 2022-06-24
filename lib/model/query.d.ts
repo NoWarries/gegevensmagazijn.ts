@@ -6,6 +6,6 @@ export declare class Query {
     expand?: Array<Array<string>>;
     filter?: Array<string>;
     select?: Array<string>;
-    custom?: string;
+    custom?: any;
     toString(): string;
 }
