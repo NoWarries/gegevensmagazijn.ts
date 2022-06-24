@@ -1,0 +1,41 @@
+{
+  "name": "@nowarries/gegevensmagazijn.ts",
+  "version": "0.7.5",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node lib/index.js",
+    "start:dev": "npx tsc -w | nodemon lib/index.js",
+    "lint": "npx eslint .",
+    "test": "jest",
+    "build": "npx tsc",
+    "build:dev": "npx tsc -w"
+  },
+  "dependencies": {
+    "@nowarries/gegevensmagazijn.ts": "^0.7.5",
+    "cross-fetch": "^3.1.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "jest": "^28.1.1",
+    "nodemon": "^2.0.18",
+    "typescript": "^4.7.4"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoWarries/gegevensmagazijn.ts.git"
+  },
+  "author": "Coen Warries",
+  "bugs": {
+    "url": "https://github.com/NoWarries/gegevensmagazijn.ts/issues"
+  },
+  "homepage": "https://github.com/NoWarries/gegevensmagazijn.ts#readme",
+  "description": ""
+}

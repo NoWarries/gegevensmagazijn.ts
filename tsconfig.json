@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "incremental": true /* Enable incremental compilation */,
+    "declaration": true /* Concatenate & emit output to single file.*/,
+    "outDir": "lib" /* Redirect output to the directory. */,
+    "rootDir": "src",
+    "target": "esnext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true /* Skip type checking of declaration files. */,
+    "forceConsistentCasingInFileNames": true /* Disallow inconsistently */,
+    "resolveJsonModule": true,
+  },
+  "include": ["src/**/*"]
+}
