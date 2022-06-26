@@ -1,5 +1,5 @@
 import { initService } from './controller/initiator';
-import { Gegevensmagazijn } from './model/gegevensmagazijn';
+import { Gegevensmagazijn } from './gegevensmagazijn';
 
 // Initialise controller object
 initService();

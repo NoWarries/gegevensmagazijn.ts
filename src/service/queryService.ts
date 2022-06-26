@@ -1,4 +1,4 @@
-import { Query } from '../model/query';
+import { Query } from '../controller/query';
 
 function processSettings(settings: Query): Query {
 
@@ -54,10 +54,8 @@ function genSelect(thisQuery: Query): string {
 }
 
 
-function genExpansion(thisQuery: Query): string {
-  let useExpand = false;
+function genExpansion(thisQuery: Query): string {  let useExpand = false;
   let expandString = '$expand=';
-
   if(thisQuery.expand !== null) {
     useExpand = true;
     thisQuery.expand.forEach((actor) => {

@@ -1,7 +1,7 @@
-import { Provider } from './provider';
-import { Query } from './query';
+import { Provider } from './config/provider';
+import { Query } from './controller/query';
 import { fetch } from 'cross-fetch';
-import { processSettings } from '../service/queryService';
+import { processSettings } from './service/queryService';
 
 export class Gegevensmagazijn {
 

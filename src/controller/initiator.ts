@@ -1,5 +1,5 @@
-import { Gegevensmagazijn } from '../model/gegevensmagazijn';
-import { Provider } from '../model/provider';
+import { Gegevensmagazijn } from '../gegevensmagazijn';
+import { Provider } from '../config/provider';
 import common from '../config/common';
 const config = common();
 
