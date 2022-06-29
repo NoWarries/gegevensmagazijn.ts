@@ -1,5 +1,5 @@
 # Gegevensmagazijn.ts
-> https://www.npmjs.com/package/@nowarries/gegevensmagazijn.ts
+> https://www.npmjs.com/package/@nowarries/Gegevensmagazijn.ts
 
 ![npm](https://img.shields.io/npm/dt/@nowarries/gegevensmagazijn.ts?style=for-the-badge)
 ![NPM](https://img.shields.io/npm/l/@nowarries/gegevensmagazijn.ts?style=for-the-badge)
@@ -19,6 +19,7 @@ A simple typescript/javascript wrapper for the Dutch : House of Representatives 
     - [Order](#order)
     - [Select](#select)
     - [Filter](#filter)
+    - [Format](#format)
     - [Custom](#custom)
 - [Advanced Examples](#advanced-examples)
 - [Dependency's](#dependency)
@@ -26,7 +27,7 @@ A simple typescript/javascript wrapper for the Dutch : House of Representatives 
 ## Installation
 To get started with the api in your project. First install the package by writing
 
-`pnpm install @nowarries/gegevensmagazijn.ts`
+`pnpm install @nowarries/Gegevensmagazijn.ts`
 
 in your project location
 
@@ -34,7 +35,7 @@ in your project location
 ### Setup
 Now the project is installed in your project we can import the project:
 ```typescript
-import { gegevensmagazijn } from "@nowarries/gegevensmagazijn.ts"
+import { gegevensmagazijn } from "@nowarries/Gegevensmagazijn.ts"
 ```
 from gegevensmagazijn all functionalities will be made available
 
@@ -189,6 +190,19 @@ _Single use : No_
     ["and"],
     ["year(GewijzigdOp) gt 2020"]
   ]
+}
+```
+
+#### Format
+| Option   | Description                            | Type                |
+|----------|----------------------------------------|---------------------|
+| `format` | sets the amount of metadata to display | `none/minimal/full` |
+_Single use : Yes_
+
+**Example:**
+```typescript
+{
+  format: 'full'
 }
 ```
 

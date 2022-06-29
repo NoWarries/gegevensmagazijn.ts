@@ -1,7 +1,5 @@
-export declare class Fractie {
-    private static fractie;
-    private fractieZetel;
-    private activiteitActor;
+import { Deserializer } from '../controller/Deserializer';
+export declare class Fractie extends Deserializer {
     Id: string;
     Nummer: number;
     Afkorting: string;
@@ -12,5 +10,6 @@ export declare class Fractie {
     DatumActief: Date;
     DatumInactief: Date;
     ContentType: string;
-    ContentLenth: number;
+    ContentLength: number;
+    static toString(): string;
 }

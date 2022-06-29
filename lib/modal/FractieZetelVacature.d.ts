@@ -1,6 +1,5 @@
-export declare class FractieZetelVacature {
-    private static FractieZetelVacature;
-    private fractieZetel;
+import { Deserializer } from '../controller/Deserializer';
+export declare class FractieZetelVacature extends Deserializer {
     Id: string;
     FractieZetel_Id: string;
     Functie: string;

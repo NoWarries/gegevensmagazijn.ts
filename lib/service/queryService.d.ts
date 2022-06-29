@@ -1,4 +1,4 @@
-import { Query } from '../controller/query';
+import { Query } from '../controller/Query';
 declare function processSettings(settings: Query): Query;
 declare function genFilter(thisQuery: Query): string;
 declare function genSelect(thisQuery: Query): string;

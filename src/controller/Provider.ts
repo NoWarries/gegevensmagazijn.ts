@@ -1,4 +1,4 @@
-import { Gegevensmagazijn } from '../gegevensmagazijn';
+import { Gegevensmagazijn } from '../Gegevensmagazijn';
 import { Provider } from '../config/provider';
 
 function setProvider(root: string, OData: string, APIData: string) {

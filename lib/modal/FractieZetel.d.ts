@@ -1,8 +1,5 @@
-export declare class FractieZetel {
-    private static fractieZetel;
-    private fractie;
-    private fractieZetelPersoon;
-    private FractieZetelVacature;
+import { Deserializer } from '../controller/Deserializer';
+export declare class FractieZetel extends Deserializer {
     Id: string;
     Gewicht: number;
     Fractie_Id: string;

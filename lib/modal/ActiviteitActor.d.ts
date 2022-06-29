@@ -1,6 +1,5 @@
-export declare class ActiviteitActor {
-    private static ActiviteitActoren;
-    private fractie;
+import { Deserializer } from '../controller/Deserializer';
+export declare class ActiviteitActor extends Deserializer {
     Id: string;
     Activiteit_Id: string;
     ActorNaam: string;

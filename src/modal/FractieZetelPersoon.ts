@@ -1,20 +1,6 @@
-import {Fractie} from './Fractie';
-import {FractieZetel} from './FractieZetel';
+import {Deserializer} from '../controller/Deserializer';
 
-
-export class FractieZetelPersoon {
-    /* Collection (static list of self) */
-    private static FractieZetelPersoon: FractieZetelPersoon[];
-
-    /* Association */
-    private fractie: Fractie;
-    private fractieZetel: FractieZetel;
-
-    /*
-     * TODO => Build and implement following associate classes
-     * Persoon
-     */
-
+export class FractieZetelPersoon extends Deserializer{
     /* Attributes */
     Id: string;
     FractieZetel_Id: string;

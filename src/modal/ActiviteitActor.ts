@@ -1,19 +1,6 @@
-import {Fractie} from './Fractie';
+import {Deserializer} from '../controller/Deserializer';
 
-export class ActiviteitActor {
-    /* Collection (static list of self) */
-    private static ActiviteitActoren: ActiviteitActor[];
-
-    /* Association */
-    private fractie: Fractie;
-
-    /*
-     * TODO => Build and implement following associate classes
-     * Activiteit
-     * Comissie
-     * Persoon
-     */
-
+export class ActiviteitActor extends Deserializer {
     /* Attributes */
     Id: string;
     Activiteit_Id: string;

@@ -1,5 +1,5 @@
 import { Provider } from './config/provider';
-import { Query } from './controller/query';
+import { Query } from './controller/Query';
 import { fetch } from 'cross-fetch';
 import { processSettings } from './service/queryService';
 
@@ -21,6 +21,7 @@ export class Gegevensmagazijn {
   public selectAll(request: string, settings?: Query): Promise<unknown> {
     const queryString = processSettings(settings).toString();
     const thisRequestURL = `${this.provider.url}${request}?${queryString}`;
+    console.log(thisRequestURL)
     return fetch(`//${thisRequestURL}`).then((res) => {
       if (res.status === 400) {
         res.json().then((err => { throw new Error(err.error.message); }));

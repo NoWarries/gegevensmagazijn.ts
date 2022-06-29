@@ -1,4 +1,4 @@
-import { Query } from '../controller/query';
+import { Query } from '../controller/Query';
 
 function processSettings(settings: Query): Query {
 
@@ -14,6 +14,7 @@ function processSettings(settings: Query): Query {
   thisQuery.order = settings['order'] || null;
   thisQuery.filter = settings['filter'] || null;
   thisQuery.expand = settings['expand'] || null;
+  thisQuery.format = settings['format'] || null;
   thisQuery.custom = settings['custom'] || null;
 
   return thisQuery;

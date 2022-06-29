@@ -1,23 +1,6 @@
-import {FractieZetel} from './FractieZetel';
-import {ActiviteitActor} from './ActiviteitActor';
+import {Deserializer} from '../controller/Deserializer';
 
-export class Fractie {
-    /* Collection (static list of self) */
-    private static fractie: Fractie[];
-
-    /* Association */
-    private fractieZetel: FractieZetel[];
-    private activiteitActor: ActiviteitActor[];
-
-    /*
-     * TODO => Build and implement following associate classes
-     * ZaakActor
-     * FractieAanvullendGegeven
-     * DocumentActor
-     * ComissieZetelVervangerVacature
-     * ComissieZetelVastVacature
-     */
-
+export class Fractie extends Deserializer {
     /* Attributes */
     Id: string;
     Nummer: number;
@@ -29,5 +12,10 @@ export class Fractie {
     DatumActief: Date;
     DatumInactief: Date;
     ContentType: string;
-    ContentLenth: number;
+    ContentLength: number;
+
+    /* toString */
+    static toString(): string {
+        return 'Fractie';
+    }
 }

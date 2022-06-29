@@ -1,12 +1,6 @@
-import {FractieZetel} from './FractieZetel';
+import {Deserializer} from '../controller/Deserializer';
 
-export class FractieZetelVacature {
-    /* Collection (static list of self) */
-    private static FractieZetelVacature: FractieZetelVacature[];
-
-    /* Association */
-    private fractieZetel: FractieZetel;
-
+export class FractieZetelVacature extends Deserializer {
     /* Attributes */
     Id: string;
     FractieZetel_Id: string;

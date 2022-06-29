@@ -11,9 +11,11 @@ export class Query {
   filter?: Array<string>;
   select?: Array<string>;
 
+  format?: 'none' | 'minimal' | 'full';
+
   custom?: string;
 
-  public toString(): string {
+  public toString?(): string {
     let output = '';
     if(this.custom !== null) {
       return this.custom;
@@ -30,6 +32,9 @@ export class Query {
     }
     if(this.order !== null) {
       output+= `$orderby=${this.order[0]} ${this.order[1]}&`;
+    }
+    if(this.format !== null) {
+      output += `$format=application/json;odata.metadata=${this.format}&`;
     }
 
     output += genFilter(this);
