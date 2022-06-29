@@ -104,7 +104,7 @@ _Single use : No_
 #### Skip
 | Option  | Description                         | Type           |
 |---------|-------------------------------------|----------------|
-| `count` | Defines the amount of items to skip | `number(0..n)` |
+| `skip` | Defines the amount of items to skip | `number(0..n)` |
 _Single use : No_
 
 **Example:**
