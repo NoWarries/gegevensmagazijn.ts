@@ -27,7 +27,7 @@ A simple typescript/javascript wrapper for the Dutch : House of Representatives 
 ## Installation
 To get started with the api in your project. First install the package by writing
 
-`pnpm install @nowarries/Gegevensmagazijn.ts`
+`pnpm install @nowarries/gegevensmagazijn.ts`
 
 in your project location
 
@@ -35,7 +35,7 @@ in your project location
 ### Setup
 Now the project is installed in your project we can import the project:
 ```typescript
-import { gegevensmagazijn } from "@nowarries/Gegevensmagazijn.ts"
+import { gegevensmagazijn } from "@nowarries/gegevensmagazijn.ts"
 ```
 from gegevensmagazijn all functionalities will be made available
 
