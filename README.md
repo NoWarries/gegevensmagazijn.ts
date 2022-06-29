@@ -27,7 +27,7 @@ A simple typescript/javascript wrapper for the Dutch : House of Representatives 
 ## Installation
 To get started with the api in your project. First install the package by writing
 
-`pnpm install @nowarries/Gegevensmagazijn.ts`
+`pnpm install @nowarries/gegevensmagazijn.ts`
 
 in your project location
 
@@ -35,7 +35,7 @@ in your project location
 ### Setup
 Now the project is installed in your project we can import the project:
 ```typescript
-import { gegevensmagazijn } from "@nowarries/Gegevensmagazijn.ts"
+import { gegevensmagazijn } from "@nowarries/gegevensmagazijn.ts"
 ```
 from gegevensmagazijn all functionalities will be made available
 
@@ -104,7 +104,7 @@ _Single use : No_
 #### Skip
 | Option  | Description                         | Type           |
 |---------|-------------------------------------|----------------|
-| `count` | Defines the amount of items to skip | `number(0..n)` |
+| `skip` | Defines the amount of items to skip | `number(0..n)` |
 _Single use : No_
 
 **Example:**
@@ -177,7 +177,7 @@ _Single use : Yes_
 #### Filter
 | Option   | Description                                       | Type            |
 |----------|---------------------------------------------------|-----------------|
-| `filter` | Given one or more filters return relevant results | `Array<string>` |
+| `filter` | Given one or more filters return relevant results | `Array<Array<string>>` |
 _Single use : No_
 
 **Example:**
