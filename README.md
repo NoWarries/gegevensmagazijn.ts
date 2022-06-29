@@ -177,7 +177,7 @@ _Single use : Yes_
 #### Filter
 | Option   | Description                                       | Type            |
 |----------|---------------------------------------------------|-----------------|
-| `filter` | Given one or more filters return relevant results | `Array<string>` |
+| `filter` | Given one or more filters return relevant results | `Array<Array<string>>` |
 _Single use : No_
 
 **Example:**
