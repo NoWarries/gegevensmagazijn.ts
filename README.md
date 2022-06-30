@@ -11,17 +11,20 @@ A simple typescript/javascript wrapper for the Dutch : House of Representatives 
 - [Installation](#installation)
 - [Usage](#usage)
   - [Setup](#Setup)
-  - [Functionalities](#functionalities)
-  - [Options](#options)
-    - [Top](#top)
-    - [Skip](#skip)
-    - [Count](#count)
-    - [Order](#order)
-    - [Select](#select)
-    - [Filter](#filter)
-    - [Format](#format)
-    - [Custom](#custom)
-- [Advanced Examples](#advanced-examples)
+  - [Method 1](#method-1) (recommended)
+    - [Options](#options)
+      - [Top](#top)
+      - [Skip](#skip)
+      - [Count](#count)
+      - [Order](#order)
+      - [Expand](#expand)
+      - [Select](#select)
+      - [Filter](#filter)
+      - [Format](#format)
+      - [Custom](#custom)
+  - [Advanced Examples](#advanced-examples)
+  - [Method 2](#method-2) (experimental)
+    - [Supported](#supported)
 - [Dependency's](#dependency)
 
 ## Installation
@@ -39,7 +42,9 @@ import { gegevensmagazijn } from "@nowarries/gegevensmagazijn.ts"
 ```
 from gegevensmagazijn all functionalities will be made available
 
-### Functionalities
+### Method 1
+> (Default / Recommended) method of extracting data
+
 The project exists of 2 main functions
 - selectAll
 - select
@@ -252,9 +257,48 @@ gegevensmagazijn.selectAll('Besluit', {
   order: ["Status", "asc"] // Sort by attribute status ascending
 })
 ```
-
 URL that is generated for you :
 > `https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Besluit?$top=1&$orderby=Status asc&$filter=( BesluitSoort eq 'Ingediend' )&$select=BesluitSoort&$expand=Zaak($select=Onderwerp)`
+
+
+### Method 2
+> Experimental method of extracting data
+
+Method 2 is **strongly discouraged** for people who are using javascript (not-typescript)
+
+You can now limitedly experiment with using a deserialized version of the api
+
+1. Start by importing the Classes you wish to access
+```typescript
+import { Fractie } from "@nowarries/gegevensmagazijn.ts"
+```
+2. Request a data by id
+```typescript
+Fractie.get('e133cd98-1b5c-47e0-ac4d-031f34199767')
+  .then((data: Fractie) => {
+    console.log(data.ActiviteitActor.Functie);
+    for (let stem in data.Stemming) {
+      console.log(data.Stemming[stem].Soort);
+    }
+  })
+  .catch((err) => console.error(err));
+```
+
+```typescript
+FractieZetel.get('0f772b49-fe42-46c7-b2b9-00e7bea09ee7')
+  .then((data: FractieZetel) => {
+    console.log(data.Gewicht);
+  });
+```
+3. All data should be made available including associations
+
+### Supported
+
+| Class        |
+|--------------|
+| Fractie      |
+| FractieZetel |
+
 
 ## Dependency
 This project is dependent on:

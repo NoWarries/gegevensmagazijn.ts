@@ -44,6 +44,7 @@ export class Gegevensmagazijn {
       return res.json();
     });
   }
+
   get provider(): Provider {
     return this._provider;
   }
