@@ -54,7 +54,6 @@ function genSelect(thisQuery: Query): string {
   return '';
 }
 
-
 function genExpansion(thisQuery: Query): string {  let useExpand = false;
   let expandString = '$expand=';
   if(thisQuery.expand !== null) {
@@ -75,6 +74,5 @@ function genExpansion(thisQuery: Query): string {  let useExpand = false;
   }
   return '';
 }
-
 
 export { processSettings, genFilter, genSelect, genExpansion };
