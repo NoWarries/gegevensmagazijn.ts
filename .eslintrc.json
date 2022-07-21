@@ -13,7 +13,10 @@
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
     "no-irregular-whitespace": ["error"],
-    "no-trailing-spaces": ["error"]
+    "no-trailing-spaces": ["error"],
+    "no-multiple-empty-lines": ["error", {
+      "max": 1
+    }]
   },
   "env": {
     "es6": true
@@ -23,5 +26,5 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["jest", "@typescript-eslint"]
+  "plugins": ["@typescript-eslint"]
 }

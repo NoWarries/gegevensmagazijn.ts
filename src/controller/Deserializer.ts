@@ -1,4 +1,3 @@
-import {gegevensmagazijn} from '../../lib';
 import {Gegevensmagazijn} from '../Gegevensmagazijn';
 export class Deserializer {
 
