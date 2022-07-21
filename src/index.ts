@@ -1,9 +1,14 @@
-import { initService } from './service/initiator';
+import { initService } from './service/initiatorService';
 import { Gegevensmagazijn } from './Gegevensmagazijn';
-import * as modal from './controller/Modal';
+import { Fractie, FractieZetel } from './modal';
 
 // Initialise controller object
 initService();
 const gegevensmagazijn = Gegevensmagazijn.self;
 
-export { gegevensmagazijn, modal };
+export {
+  gegevensmagazijn,
+
+  Fractie,
+  FractieZetel
+};

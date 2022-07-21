@@ -1,5 +1,5 @@
 import { Provider } from './config/provider';
-import { Query } from './controller/query';
+import { Query } from './controller/Query';
 export declare class Gegevensmagazijn {
     static self: Gegevensmagazijn;
     private _provider;

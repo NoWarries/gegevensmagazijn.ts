@@ -1,3 +1,4 @@
-import { Gegevensmagazijn } from './gegevensmagazijn';
+import { Gegevensmagazijn } from './Gegevensmagazijn';
+import { Fractie, FractieZetel } from './modal';
 declare const gegevensmagazijn: Gegevensmagazijn;
-export { gegevensmagazijn };
+export { gegevensmagazijn, Fractie, FractieZetel };
