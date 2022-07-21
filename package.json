@@ -8,7 +8,7 @@
     "start": "node lib/index.js",
     "start:dev": "npx tsc -w | nodemon lib/index.js",
     "lint": "npx eslint .",
-    "test": "jest",
+    "prepare": "husky install",
     "build": "npx tsc",
     "build:dev": "npx tsc -w"
   },
