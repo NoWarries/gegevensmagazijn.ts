@@ -3,11 +3,10 @@ import { FractieZetel } from '../modal';
 
 export class Fractie extends Deserializer {
     /* Associations */
-        /* 1..1 */
-    // Stemming: Stemming;
         /* 1..n */
     // ZaakActor: ZaakActor;
     FractieZetel: FractieZetel;
+    // Stemming: Stemming;
     // FractieAanvullendGegeven: FractieAanvullendGegeven;
     // DocumentActor: DocumentActor;
     // CommissieZetelVervangerVacature: CommissieZetelVervangerVacature;
