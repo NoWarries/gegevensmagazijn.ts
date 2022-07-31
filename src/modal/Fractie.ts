@@ -1,12 +1,12 @@
 import {Deserializer} from '../controller/Deserializer';
-import { FractieZetel } from '../modal';
+import { FractieZetel, Stemming } from '../modal';
 
 export class Fractie extends Deserializer {
     /* Associations */
         /* 1..n */
     // ZaakActor: ZaakActor;
     FractieZetel: FractieZetel;
-    // Stemming: Stemming;
+    Stemming: Stemming;
     // FractieAanvullendGegeven: FractieAanvullendGegeven;
     // DocumentActor: DocumentActor;
     // CommissieZetelVervangerVacature: CommissieZetelVervangerVacature;
