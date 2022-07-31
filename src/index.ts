@@ -1,6 +1,6 @@
 import { initService } from './service/initiatorService';
 import { Gegevensmagazijn } from './Gegevensmagazijn';
-import { Fractie, FractieZetel } from './modal';
+import { Fractie, FractieZetel, Stemming } from './modal';
 
 // Initialise controller object
 initService();
@@ -10,5 +10,6 @@ export {
   gegevensmagazijn,
 
   Fractie,
-  FractieZetel
+  FractieZetel,
+  Stemming
 };
