@@ -1,12 +1,7 @@
-import {Deserializer} from '../controller/Deserializer';
+import { Deserializer } from '../controller/Deserializer';
 import { Vergadering } from '../modal';
-
-export class Verslag extends Deserializer {
-    /* Associations */
-    /* n..1 */
+export declare class Verslag extends Deserializer {
     Vergadering: Vergadering;
-
-    /* Attributes */
     Id: string;
     Soort: string;
     Status: string;
@@ -16,9 +11,5 @@ export class Verslag extends Deserializer {
     ApiGewijzigdOp: string;
     Verwijderd: boolean;
     Vergadering_Id: string;
-
-    /* toString */
-    static toString(): string {
-        return 'Verslag';
-    }
+    static toString(): string;
 }

@@ -1,7 +1,8 @@
 import { Deserializer } from '../controller/Deserializer';
-import { FractieZetel } from '../modal';
+import { FractieZetel, Stemming } from '../modal';
 export declare class Fractie extends Deserializer {
     FractieZetel: FractieZetel;
+    Stemming: Stemming;
     Id: string;
     Nummer: number;
     Afkorting: string;
