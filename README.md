@@ -298,7 +298,9 @@ FractieZetel.get('0f772b49-fe42-46c7-b2b9-00e7bea09ee7')
 |--------------|
 | Fractie      |
 | FractieZetel |
-
+| Stemming     |
+| Verslag      |
+| Vergadering  |
 
 ## Dependency
 This project is dependent on:
