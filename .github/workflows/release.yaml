@@ -1,6 +1,6 @@
 name: Release
 
-on: [workflow_call, workflow_dispatch]
+on: [workflow_dispatch, release]
 
 jobs:
   npm:
