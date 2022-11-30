@@ -1,4 +1,4 @@
-import {Provider} from './Provider';
+import { Provider } from './Provider';
 
 export class ProviderBuilder {
   private root: string;
@@ -18,10 +18,6 @@ export class ProviderBuilder {
   }
 
   public build(): Provider {
-    return new Provider(
-        this.root,
-        this.OData,
-        this.APIData
-    );
+    return new Provider(this.root, this.OData, this.APIData);
   }
 }

@@ -1,7 +1,6 @@
 import { Query } from './Query';
 
 function processSettings(settings: Query): Query {
-
   const thisQuery = new Query(); // setup query
   if (settings === undefined || settings === null) {
     return thisQuery;
@@ -24,14 +23,14 @@ function genFilter(thisQuery: Query): string {
   let useFilter = false;
   let filterString = '$filter=( ';
 
-  if(thisQuery.filter !== null) {
+  if (thisQuery.filter !== null) {
     useFilter = true;
     thisQuery.filter.forEach((filterRule) => {
       filterString += `${filterRule} `;
     });
   }
 
-  if(useFilter) {
+  if (useFilter) {
     return `${filterString})&`.trim();
   }
   return '';
@@ -41,36 +40,37 @@ function genSelect(thisQuery: Query): string {
   let useSelect = false;
   let selectString = '$select=';
 
-  if(thisQuery.select !== null) {
+  if (thisQuery.select !== null) {
     useSelect = true;
     thisQuery.select.forEach((selectAttribute) => {
       selectString += `${selectAttribute},`;
     });
   }
 
-  if(useSelect) {
-    return `${selectString.slice(0,-1)}&`.trim();
+  if (useSelect) {
+    return `${selectString.slice(0, -1)}&`.trim();
   }
   return '';
 }
 
-function genExpansion(thisQuery: Query): string {  let useExpand = false;
+function genExpansion(thisQuery: Query): string {
+  let useExpand = false;
   let expandString = '$expand=';
-  if(thisQuery.expand !== null) {
+  if (thisQuery.expand !== null) {
     useExpand = true;
     thisQuery.expand.forEach((actor) => {
-      if(actor[1] !== null && actor[1] !== undefined) {
+      if (actor[1] !== null && actor[1] !== undefined) {
         expandString += `${actor[0]}`;
         expandString += `(${actor[1]}),`;
       } else {
         expandString += `${actor[0]},`;
       }
-      expandString+='';
+      expandString += '';
     });
   }
 
-  if(useExpand) {
-    return `${expandString.slice(0,-1)}&`.trim();
+  if (useExpand) {
+    return `${expandString.slice(0, -1)}&`.trim();
   }
   return '';
 }

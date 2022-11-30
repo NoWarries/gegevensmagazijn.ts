@@ -17,23 +17,23 @@ export class Query {
 
   public toString?(): string {
     let output = '';
-    if(this.custom !== null) {
+    if (this.custom !== null) {
       return this.custom;
     }
 
-    if(this.top !== null) {
+    if (this.top !== null) {
       output += `$top=${this.top}&`;
     }
-    if(this.skip !== null) {
+    if (this.skip !== null) {
       output += `$skip=${this.skip}&`;
     }
-    if(this.count !== null) {
+    if (this.count !== null) {
       output += `$count=${this.count}&`;
     }
-    if(this.order !== null) {
-      output+= `$orderby=${this.order[0]} ${this.order[1]}&`;
+    if (this.order !== null) {
+      output += `$orderby=${this.order[0]} ${this.order[1]}&`;
     }
-    if(this.format !== null) {
+    if (this.format !== null) {
       output += `$format=application/json;odata.metadata=${this.format}&`;
     }
 
@@ -41,8 +41,8 @@ export class Query {
     output += genSelect(this);
     output += genExpansion(this);
 
-    if(output.charAt(output.length - 1) === '&') {
-      output = output.slice(0,-1);
+    if (output.charAt(output.length - 1) === '&') {
+      output = output.slice(0, -1);
     }
     return output;
   }

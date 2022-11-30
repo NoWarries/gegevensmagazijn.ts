@@ -4,7 +4,6 @@ import { fetch } from 'cross-fetch';
 import { processSettings } from '../query/QueryService';
 
 export class Gegevensmagazijn {
-
   static self: Gegevensmagazijn;
   private _provider: Provider;
 
@@ -23,21 +22,29 @@ export class Gegevensmagazijn {
     const thisRequestURL = `${this.provider.url}${request}?${queryString}`;
     return fetch(`//${thisRequestURL}`).then((res) => {
       if (res.status === 400) {
-        res.json().then((err => { throw new Error(err.error.message); }));
-      } else if(!res.ok) {
+        res.json().then((err) => {
+          throw new Error(err.error.message);
+        });
+      } else if (!res.ok) {
         throw new Error(`Other error occurred with code : ${res.status}`);
       }
       return res.json();
     });
   }
 
-  public select(request: string, identifier: string, settings?: Query): Promise<unknown> {
+  public select(
+    request: string,
+    identifier: string,
+    settings?: Query
+  ): Promise<unknown> {
     const queryString = processSettings(settings).toString();
     const thisRequestURL = `${this.provider.url}${request}/${identifier}?${queryString}`;
     return fetch(`//${thisRequestURL}`).then((res) => {
       if (res.status === 400) {
-        res.json().then((err => { throw new Error(err.error.message); }));
-      } else if(!res.ok) {
+        res.json().then((err) => {
+          throw new Error(err.error.message);
+        });
+      } else if (!res.ok) {
         throw new Error(`Other error occurred with code : ${res.status}`);
       }
       return res.json();
