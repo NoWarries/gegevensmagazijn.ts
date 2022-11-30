@@ -1,7 +1,7 @@
 {
   "name": "@nowarries/gegevensmagazijn.ts",
   "description": "A simple typescript/javascript wrapper for the Dutch : House of Representatives OData API",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "license": "MIT",
