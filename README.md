@@ -1,8 +1,8 @@
 # Gegevensmagazijn.ts
 > https://www.npmjs.com/package/gegevensmagazijn.ts
 
-![npm](https://img.shields.io/npm/dt/@nowarries/gegevensmagazijn.ts?style=for-the-badge)
-![NPM](https://img.shields.io/npm/l/@nowarries/gegevensmagazijn.ts?style=for-the-badge)
+![npm](https://img.shields.io/npm/dt/gegevensmagazijn.ts?style=for-the-badge)
+![NPM](https://img.shields.io/npm/l/gegevensmagazijn.ts?style=for-the-badge)
 
 A simple typescript/javascript wrapper for the Dutch : House of Representatives OData API
 
@@ -30,7 +30,11 @@ A simple typescript/javascript wrapper for the Dutch : House of Representatives 
 ## Installation
 To get started with the api in your project. First install the package by writing
 
-`pnpm install @nowarries/gegevensmagazijn.ts`
+`npm install gegevensmagazijn.ts`
+
+`pnpm install gegevensmagazijn.ts`
+
+`yarn add gegevensmagazijn.ts`
 
 in your project location
 
@@ -38,7 +42,7 @@ in your project location
 ### Setup
 Now the project is installed in your project we can import the project:
 ```typescript
-import { gegevensmagazijn } from "@nowarries/gegevensmagazijn.ts"
+import { gegevensmagazijn } from "gegevensmagazijn.ts"
 ```
 from gegevensmagazijn all functionalities will be made available
 
@@ -270,7 +274,7 @@ You can now limitedly experiment with using a deserialized version of the api
 
 1. Start by importing the Classes you wish to access
 ```typescript
-import { Fractie } from "@nowarries/gegevensmagazijn.ts"
+import { Fractie } from "gegevensmagazijn.ts"
 ```
 2. Request a data by id
 ```typescript
