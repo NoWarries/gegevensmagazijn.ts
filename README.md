@@ -276,7 +276,6 @@ import { Fractie } from "@nowarries/gegevensmagazijn.ts"
 ```typescript
 Fractie.get('e133cd98-1b5c-47e0-ac4d-031f34199767')
   .then((data: Fractie) => {
-    console.log(data.ActiviteitActor.Functie);
     for (let stem in data.Stemming) {
       console.log(data.Stemming[stem].Soort);
     }

@@ -1,10 +1,13 @@
-{
+module.exports = {
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {}
+  },
+  "env": {
+    "es6": true
   },
   "ignorePatterns": "lib",
   "rules": {
@@ -17,9 +20,6 @@
     "no-multiple-empty-lines": ["error", {
       "max": 1
     }]
-  },
-  "env": {
-    "es6": true
   },
   "extends": [
     "eslint:recommended",

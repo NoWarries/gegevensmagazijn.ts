@@ -1,4 +1,4 @@
-import {Deserializer} from '../controller/Deserializer';
+import {Deserializer} from './adapters/Deserializer';
 import { Fractie } from '../modal';
 
 export class FractieZetel extends Deserializer {

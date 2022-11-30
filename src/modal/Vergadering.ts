@@ -1,4 +1,4 @@
-import {Deserializer} from '../controller/Deserializer';
+import {Deserializer} from './adapters/Deserializer';
 import { Verslag } from '../modal';
 
 export class Vergadering extends Deserializer {

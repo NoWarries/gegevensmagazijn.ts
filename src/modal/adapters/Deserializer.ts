@@ -1,4 +1,4 @@
-import {Gegevensmagazijn} from '../Gegevensmagazijn';
+import {Gegevensmagazijn} from '../../app/Gegevensmagazijn';
 export class Deserializer {
 
     public static get(Identifier: string): Promise<Deserializer> {

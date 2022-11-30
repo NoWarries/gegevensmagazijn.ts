@@ -1,4 +1,4 @@
-import { Query } from '../controller/Query';
+import { Query } from './Query';
 
 function processSettings(settings: Query): Query {
 

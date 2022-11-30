@@ -1,10 +1,7 @@
-import { initService } from './service/initiatorService';
-import { Gegevensmagazijn } from './Gegevensmagazijn';
 import { Fractie, FractieZetel, Stemming, Vergadering, Verslag } from './modal';
+import {GegevensmagazijnSingleton} from './app/GegevensmagazijnSingleton';
 
-// Initialise controller object
-initService();
-const gegevensmagazijn = Gegevensmagazijn.self;
+const gegevensmagazijn = GegevensmagazijnSingleton.getInstance();
 
 export {
   gegevensmagazijn,

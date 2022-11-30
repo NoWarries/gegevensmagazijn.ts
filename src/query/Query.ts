@@ -1,4 +1,4 @@
-import { genExpansion, genFilter, genSelect } from '../service/queryService';
+import { genExpansion, genFilter, genSelect } from './QueryService';
 
 export class Query {
   top?: number;
