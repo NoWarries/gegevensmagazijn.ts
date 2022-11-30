@@ -35,7 +35,7 @@ jobs:
         path: ~/.npm 
         key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
     - run: npm install --prefer-offline
-    - run: sed -i 's/"cross-fetch"/"@lquixada\/cross-fetch"/g' package.json
+    - run: sed -i 's/"gegevensmagazijn.ts"/"@nowarries\/gegevensmagazijn.ts"/g' package.json
     - run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
