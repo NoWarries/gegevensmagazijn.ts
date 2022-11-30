@@ -1,0 +1,41 @@
+name: Release
+
+on: [workflow_call]
+
+jobs:
+  npm:
+    name: Publish to NPM registry
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '10'
+        registry-url: 'https://registry.npmjs.org'
+    - uses: actions/cache@v3
+      with:
+        path: ~/.npm 
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+    - run: npm install --prefer-offline
+    - run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  github:
+    name: Publish to Github registry
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '10'
+        registry-url: 'https://npm.pkg.github.com'
+    - uses: actions/cache@v3
+      with:
+        path: ~/.npm 
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+    - run: npm install --prefer-offline
+    - run: sed -i 's/"cross-fetch"/"@lquixada\/cross-fetch"/g' package.json
+    - run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
