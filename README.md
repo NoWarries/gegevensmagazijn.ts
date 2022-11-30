@@ -1,5 +1,5 @@
 # Gegevensmagazijn.ts
-> https://www.npmjs.com/package/@nowarries/gegevensmagazijn.ts
+> https://www.npmjs.com/package/gegevensmagazijn.ts
 
 ![npm](https://img.shields.io/npm/dt/@nowarries/gegevensmagazijn.ts?style=for-the-badge)
 ![NPM](https://img.shields.io/npm/l/@nowarries/gegevensmagazijn.ts?style=for-the-badge)
