@@ -8,7 +8,7 @@ export class Query {
   order?: [string, 'asc' | 'desc' | null];
   expand?: Array<Array<string>>;
 
-  filter?: Array<string>;
+  filter?: Array<Array<string>>;
   select?: Array<string>;
 
   format?: 'none' | 'minimal' | 'full';
