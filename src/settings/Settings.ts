@@ -1,5 +1,5 @@
 export class Settings {
-  _top?: number;
+  top?: number;
 
   skip?: number;
   count?: boolean;
@@ -8,23 +8,9 @@ export class Settings {
   expand?: Array<Array<string>>;
 
   filter?: Array<Array<string>>;
-  select?: Array<string>;
+  select?: Array<string> | string[][];
 
-  format?: 'none' | 'minimal' | 'full';
+  format?: 'none' | 'minimal' | 'full' | string;
 
   custom?: string;
-
-  // Getter(s)
-  get top(): number {
-    return this._top;
-  }
-  // Setter(s)
-  set top(top: number) {
-    if (top != null && top < 0) {
-      throw new Error(
-        'Settings function `top` required to be positive, you inputted : ' + top
-      );
-    }
-    this._top = top;
-  }
 }
