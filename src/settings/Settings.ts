@@ -8,9 +8,9 @@ export class Settings {
   expand?: Array<Array<string>>;
 
   filter?: Array<Array<string>>;
-  select?: Array<string> | string[][];
+  select?: Array<string>;
 
-  format?: 'none' | 'minimal' | 'full' | string;
+  format?: 'none' | 'minimal' | 'full';
 
   custom?: string;
 }
