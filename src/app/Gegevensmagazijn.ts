@@ -1,7 +1,7 @@
 import { Provider } from '../provider/Provider';
-import { Query } from '../query/Query';
+import { Settings } from '../settings/Settings';
 import { fetch } from 'cross-fetch';
-import { processSettings } from '../query/QueryService';
+import { SettingsController } from '../settings/SettingsController';
 
 export class Gegevensmagazijn {
   static self: Gegevensmagazijn;
@@ -15,10 +15,13 @@ export class Gegevensmagazijn {
   /**
    * Given a request source and optionaly a set of settings, return the correct data from the OData API
    * @param {string} request the source you wish to request e.g. ["Fractie", "Stemming"]
-   * @param {Query} settings configurations
+   * @param {Settings} settings configurations
    */
-  public selectAll(request: string, settings?: Query): Promise<unknown> {
-    const queryString = processSettings(settings).toString();
+  public selectAll(request: string, settings?: Settings): Promise<unknown> {
+    const settingController: SettingsController = new SettingsController(
+      settings
+    );
+    const queryString = settingController.buildQuery();
     const thisRequestURL = `${this.provider.url}${request}?${queryString}`;
     return fetch(`//${thisRequestURL}`).then((res) => {
       if (res.status === 400) {
@@ -35,9 +38,12 @@ export class Gegevensmagazijn {
   public select(
     request: string,
     identifier: string,
-    settings?: Query
+    settings?: Settings
   ): Promise<unknown> {
-    const queryString = processSettings(settings).toString();
+    const settingController: SettingsController = new SettingsController(
+      settings
+    );
+    const queryString = settingController.buildQuery();
     const thisRequestURL = `${this.provider.url}${request}/${identifier}?${queryString}`;
     return fetch(`//${thisRequestURL}`).then((res) => {
       if (res.status === 400) {

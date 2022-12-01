@@ -63,7 +63,7 @@ The project exists of 2 main functions
 
 #### selectAll(request, settings?)
 
-`selectAll` as you might've guessed will get all information relevant to the given Query.
+`selectAll` as you might've guessed: will get all information relevant to the given Settings/Query.
 
 A request might look like this
 
