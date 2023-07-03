@@ -1,11 +1,15 @@
 # Gegevensmagazijn.ts
 
+![GitHub deployments](https://img.shields.io/github/deployments/nowarries/gegevensmagazijn.ts/github-pages?style=for-the-badge&label=Wrapper%20Documentation&link=https%3A%2F%2Fnowarries.github.io%2Fgegevensmagazijn.ts%2F)
+
 > https://www.npmjs.com/package/gegevensmagazijn.ts
 
-![npm](https://img.shields.io/npm/dt/gegevensmagazijn.ts?style=for-the-badge)
+![NPM](https://img.shields.io/npm/dt/gegevensmagazijn.ts?style=for-the-badge)
 ![NPM](https://img.shields.io/npm/l/gegevensmagazijn.ts?style=for-the-badge)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/nowarries/gegevensmagazijn.ts/jest.yml?style=for-the-badge&label=%F0%9F%83%8F%20Tests)
 
-A simple typescript/javascript wrapper for the Dutch : House of Representatives OData API
+
+A simple typescript/javascript wrapper for the Dutch : House of Representatives OData API.
 
 ## Table of Contents
 
@@ -51,6 +55,10 @@ request.findById("d720f5af-0516-408a-b830-0b6ffb8a581c")
 ```
 
 ### Functions
+To properly use the wrapper, you need to know the functions that are available to you.
+For this you can use the [documentation](https://nowarries.github.io/gegevensmagazijn.ts/).
+Examples 
+
 Now you can apply the ['functions'](https://opendata.tweedekamer.nl/documentatie/odata-api#heading-116)
 to the request. For example, if you want to get the chairs of a specific fraction, you can use the `expand` method
 like this:
