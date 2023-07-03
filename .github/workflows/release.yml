@@ -19,7 +19,7 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-      - run: npm install --prefer-offline
+      - run: npm install
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -37,7 +37,7 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-      - run: npm install --prefer-offline
+      - run: npm install
       - run: sed -i 's/"gegevensmagazijn.ts"/"@nowarries\/gegevensmagazijn.ts"/g' package.json
       - run: npm publish
         env:
