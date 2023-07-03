@@ -13,12 +13,10 @@ export class RequestBuilderImpl implements RequestBuilder {
   /**
    * Endpoint to make the request to
    * @default "https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0"
-   * @internal
    */
   _endpoint: string = 'https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0';
   /**
    * Entity to make the request for
-   * @internal
    */
   _entity: string;
 
