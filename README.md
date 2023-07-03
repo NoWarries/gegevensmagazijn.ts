@@ -1,15 +1,23 @@
 # Gegevensmagazijn.ts
 
-![GitHub deployments](https://img.shields.io/github/deployments/nowarries/gegevensmagazijn.ts/github-pages?style=for-the-badge&label=Wrapper%20Documentation&link=https%3A%2F%2Fnowarries.github.io%2Fgegevensmagazijn.ts%2F)
+A simple typescript/javascript wrapper for the Dutch : House of Representatives OData API.
 
-> https://www.npmjs.com/package/gegevensmagazijn.ts
+![GitHub deployments](https://img.shields.io/github/deployments/nowarries/gegevensmagazijn.ts/github-pages?style=for-the-badge&label=Wrapper%20Documentation&link=https%3A%2F%2Fnowarries.github.io%2Fgegevensmagazijn.ts%2F)
 
 ![NPM](https://img.shields.io/npm/dt/gegevensmagazijn.ts?style=for-the-badge)
 ![NPM](https://img.shields.io/npm/l/gegevensmagazijn.ts?style=for-the-badge)
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/nowarries/gegevensmagazijn.ts/jest.yml?style=for-the-badge&label=%F0%9F%83%8F%20Tests)
 
+**GitHub Repository**
+> https://github.com/nowarries/gegevensmagazijn.ts
 
-A simple typescript/javascript wrapper for the Dutch : House of Representatives OData API.
+**NPM Package**
+> https://www.npmjs.com/package/gegevensmagazijn.ts
+
+**Wrapper Documentation**
+> https://nowarries.github.io/gegevensmagazijn.ts/
+
+
 
 ## Table of Contents
 
