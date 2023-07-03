@@ -30,15 +30,4 @@ import { RequestBuilder } from './RequestBuilder/RequestBuilder';
  */
 const ODataRequest = RequestBuilderImpl;
 
-const request = new ODataRequest('Fractie')
-  .expand('FractieZetel', '$select=Id')
-  .filter('AantalZetels gt 10 and AantalZetels lt 50')
-  .filter("Afkorting ne 'D66'")
-  .orderby('AantalZetels', 'desc')
-  .skip(1)
-  .count(true)
-  .format('minimal');
-
-console.log(request.build());
-
 export { ODataRequest, RequestBuilder, RequestBuilderImpl };
