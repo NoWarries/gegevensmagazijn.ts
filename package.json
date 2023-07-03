@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npx tsc && node lib/index.js",
-    "prepare": "npm run build",
+    "prepare": "npm run build && husky install",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "build": "npx tsc -p tsconfig.json",
