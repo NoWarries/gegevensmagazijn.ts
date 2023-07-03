@@ -96,6 +96,16 @@ test('no entity set throws error', () => {
   expect(() => ODataRequest.build()).toThrowError('No entity specified');
 });
 
+test('no entity catch error', () => {
+  ODataRequest._entity = null;
+  expect.assertions(1);
+  try {
+    ODataRequest.build();
+  } catch (e) {
+    expect(e.message).toBe('No entity specified');
+  }
+});
+
 test('Custom will overwrite previous options (1/2)', () => {
   ODataRequest.top(5).custom('$custom');
   expect(ODataRequest.build()).toBe(
