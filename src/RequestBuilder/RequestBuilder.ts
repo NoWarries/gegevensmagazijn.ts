@@ -27,6 +27,13 @@ export interface RequestBuilder {
   _id?: string;
 
   /**
+   * Custom query option
+   * @internal
+   * @hidden
+   */
+  _custom?: string;
+
+  /**
    * The amount of results to return
    * @internal
    * @hidden
@@ -297,6 +304,28 @@ export interface RequestBuilder {
    * @category OData functions
    */
   orderby(field: string, direction?: 'asc' | 'desc'): RequestBuilder;
+
+  /**
+   * Use a custom query. Will overwrite all previously declared functions.
+   * And will directly use the given query
+   *
+   * @param query The custom query to use
+   * @returns The RequestBuilderImpl
+   * @throws Error if the query does not start with a '$'
+   *
+   * @example
+   * new ODataRequest('Fractie')
+   *  .custom('$select=Afkorting')
+   *  // https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Fractie?$select=Afkorting
+   *
+   *  @example
+   *  new ODataRequest('Fractie')
+   *    .custom('$select=Afkorting&$top=1')
+   *  // https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Fractie?$select=Afkorting&$top=1
+   *
+   * @category OData functions extensions
+   */
+  custom(query: string): RequestBuilder;
 
   /**
    * Given the current state of the RequestBuilderImpl, build the request url according to functions provided

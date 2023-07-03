@@ -95,3 +95,17 @@ test('no entity set throws error', () => {
   ODataRequest._entity = null;
   expect(() => ODataRequest.build()).toThrowError('No entity specified');
 });
+
+test('Custom will overwrite previous options (1/2)', () => {
+  ODataRequest.top(5).custom('$custom');
+  expect(ODataRequest.build()).toBe(
+    'https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Besluit?$custom'
+  );
+});
+
+test('Custom will overwrite previous options (2/2)', () => {
+  ODataRequest.top(5).custom('$select=Afkorting&$top=1');
+  expect(ODataRequest.build()).toBe(
+    'https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Besluit?$select=Afkorting&$top=1'
+  );
+});

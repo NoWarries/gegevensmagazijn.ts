@@ -28,6 +28,11 @@ export class RequestBuilderImpl implements RequestBuilder {
   _id?: string;
 
   /**
+   * Custom query option
+   */
+  _custom?: string;
+
+  /**
    * Amount of results to return
    * @category ODataOptions
    */
@@ -220,6 +225,15 @@ export class RequestBuilderImpl implements RequestBuilder {
 
   /**
    * @inheritDoc {@link RequestBuilder}
+   */
+  custom(query: string): RequestBuilder {
+    if (!query.startsWith('$')) throw new Error('Query must start with $');
+    this._custom = query;
+    return this;
+  }
+
+  /**
+   * @inheritDoc {@link RequestBuilder}
    * @category Resolve functions
    */
   build(): string {
@@ -232,6 +246,11 @@ export class RequestBuilderImpl implements RequestBuilder {
     let request = `${this._endpoint}/${this._entity}`;
     if (this._id) {
       request += `/${this._id}`;
+    }
+
+    if (this._custom) {
+      request += `?${this._custom}`;
+      return request;
     }
 
     if (this._top) {
