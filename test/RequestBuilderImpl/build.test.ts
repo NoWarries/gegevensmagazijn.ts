@@ -126,3 +126,14 @@ test('Custom endpoint is processed correctly', () => {
     'https://proxy.tweedekamer.nl/OData/v4/2.0/Besluit'
   );
 });
+
+test('Custom endpoint and functions are working together (teamwork!)', () => {
+  ODataRequest.endpoint('https://proxy.tweedekamer.nl/OData/v4/2.0');
+  ODataRequest.top(5);
+  ODataRequest.custom('$select=Afkorting&$top=1');
+  ODataRequest.skip(5);
+
+  expect(ODataRequest.build()).toBe(
+    'https://proxy.tweedekamer.nl/OData/v4/2.0/Besluit?$select=Afkorting&$top=1'
+  );
+});

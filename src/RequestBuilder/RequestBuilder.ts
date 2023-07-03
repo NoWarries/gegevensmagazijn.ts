@@ -326,11 +326,15 @@ export interface RequestBuilder {
 
   /**
    * Use a custom query. Will overwrite all previously declared functions.
-   * And will directly use the given query
+   * And will directly use the given query. Functions declared after this function will also be ignored.
    *
    * @param query The custom query to use
    * @returns The RequestBuilderImpl
    * @throws Error if the query does not start with a '$'
+   *
+   * @remarks
+   * - Will ignore all previously declared functions
+   * - Will ignore all functions declared after this function
    *
    * @example
    * new ODataRequest('Fractie')
