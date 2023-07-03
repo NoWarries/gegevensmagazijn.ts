@@ -81,7 +81,7 @@ So if you want to use these options, you cannot use the findById method. Instead
 
 ### Processing the request
 
-Once you applied all the functions you want to the request, you can process 1 of 2 options.
+Once you applied all the functions you want to the request, you can pick one of the following options to process the request.
 
 1. Use the `build()` method to get the query url. This can be used to make a request with a different library.
 

@@ -25,7 +25,7 @@ import { RequestBuilder } from './RequestBuilder/RequestBuilder';
  *     console.warn(error);
  * });
  *
- * @see {@link RequestBuilderImpl} - ODataRequest interface
+ * @see {@link RequestBuilder} - ODataRequest interface
  * @see {@link RequestBuilderImpl} - default implementation
  */
 const ODataRequest = RequestBuilderImpl;

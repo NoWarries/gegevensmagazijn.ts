@@ -295,6 +295,10 @@ export interface RequestBuilder {
    *
    * @example
    * new ODataRequest('Fractie')
+   *   .orderby('NaamNL') // Direction defaults to asc
+   *
+   * @example
+   * new ODataRequest('Fractie')
    *   .orderby('NaamNL', 'asc')
    *
    * @example
