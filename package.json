@@ -1,7 +1,7 @@
 {
   "name": "gegevensmagazijn.ts",
   "description": "A simple typescript/javascript wrapper for the Dutch : House of Representatives OData API",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Coen Warries",
@@ -13,7 +13,7 @@
     "test:coverage": "jest --coverage",
     "build": "npx tsc -p tsconfig.json",
     "build:dev": "npx tsc -w",
-    "build:docs": "npx typedoc  ./src/index.ts",
+    "build:docs": "npx typedoc ./src/index.ts",
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
   "dependencies": {
