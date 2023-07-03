@@ -1,49 +1,40 @@
 {
   "name": "gegevensmagazijn.ts",
   "description": "A simple typescript/javascript wrapper for the Dutch : House of Representatives OData API",
-  "version": "2.1.0-alpha",
+  "version": "3.0.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "author": "Coen Warries",
   "license": "MIT",
   "scripts": {
-    "start": "node lib/index.js",
-    "start:dev": "npx tsc -w | nodemon lib/index.js",
+    "start": "npx tsc && node lib/index.js",
+    "prepare": "npm run build",
     "test": "jest",
-    "lint": "npx eslint .",
-    "prepare": "npm run build && husky install",
-    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "test:coverage": "jest --coverage",
     "build": "npx tsc -p tsconfig.json",
-    "build:dev": "npx tsc -w"
+    "build:dev": "npx tsc -w",
+    "build:docs": "npx typedoc  ./src/index.ts",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
   "dependencies": {
-    "cross-fetch": "^3.1.5"
-  },
-  "devDependencies": {
-    "@jest/globals": "^29.3.1",
-    "@types/jest": "^29.2.3",
-    "@typescript-eslint/eslint-plugin": "^5.29.0",
-    "@typescript-eslint/parser": "^5.29.0",
-    "eslint": "^8.22.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.0",
-    "jest": "^29.3.1",
-    "nodemon": "^2.0.18",
-    "prettier": "^2.8.0",
-    "pretty-quick": "^3.1.3",
-    "ts-jest": "^29.0.3",
-    "typescript": "^4.9.3"
+    "cross-fetch": "^3.1.5",
+    "typescript": "^5.0.4"
   },
   "files": [
     "lib"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NoWarries/gegevensmagazijn.ts.git"
+  "devDependencies": {
+    "@types/jest": "^29.5.2",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8",
+    "ts-jest": "^27.0.3",
+    "typedoc": "^0.24.8",
+    "typedoc-plugin-missing-exports": "^2.0.0"
   },
-  "author": "Coen Warries",
-  "bugs": {
-    "url": "https://github.com/NoWarries/gegevensmagazijn.ts/issues"
-  },
-  "homepage": "https://github.com/NoWarries/gegevensmagazijn.ts#readme"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test:coverage && npm run prettier"
+    }
+  }
 }

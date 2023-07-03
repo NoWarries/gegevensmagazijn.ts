@@ -1,6 +1,9 @@
-name: Release
+name: "🆕 Release distribution"
 
-on: [workflow_dispatch, release]
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
 
 jobs:
   npm:
