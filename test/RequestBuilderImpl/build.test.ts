@@ -119,3 +119,10 @@ test('Custom will overwrite previous options (2/2)', () => {
     'https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Besluit?$select=Afkorting&$top=1'
   );
 });
+
+test('Custom endpoint is processed correctly', () => {
+  ODataRequest.endpoint('https://proxy.tweedekamer.nl/OData/v4/2.0');
+  expect(ODataRequest.build()).toBe(
+    'https://proxy.tweedekamer.nl/OData/v4/2.0/Besluit'
+  );
+});

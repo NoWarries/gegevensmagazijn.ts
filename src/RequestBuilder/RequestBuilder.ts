@@ -310,6 +310,21 @@ export interface RequestBuilder {
   orderby(field: string, direction?: 'asc' | 'desc'): RequestBuilder;
 
   /**
+   * Overwrite the default endpoint
+   * @param endpoint The endpoint to use
+   * @returns The RequestBuilderImpl
+   *
+   * @experimental
+   *
+   * @example
+   * new ODataRequest('Fractie')
+   *    .endpoint('https://proxy.tweedekamer.nl/OData/v4/2.0')
+   *
+   * @category Advanced/Development functions
+   */
+  endpoint(endpoint: string): RequestBuilder;
+
+  /**
    * Use a custom query. Will overwrite all previously declared functions.
    * And will directly use the given query
    *

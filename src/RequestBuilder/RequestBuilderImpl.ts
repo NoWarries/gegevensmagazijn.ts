@@ -223,6 +223,15 @@ export class RequestBuilderImpl implements RequestBuilder {
 
   /**
    * @inheritDoc {@link RequestBuilder}
+   * @category Advanced/Development functions
+   */
+  endpoint(endpoint: string): RequestBuilder {
+    this._endpoint = endpoint;
+    return this;
+  }
+
+  /**
+   * @inheritDoc {@link RequestBuilder}
    */
   custom(query: string): RequestBuilder {
     if (!query.startsWith('$')) throw new Error('Query must start with $');
