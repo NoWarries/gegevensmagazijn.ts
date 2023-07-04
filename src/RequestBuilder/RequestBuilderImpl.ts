@@ -279,8 +279,7 @@ export class RequestBuilderImpl implements RequestBuilder {
 
     if (this._expand.length > 0) {
       const expandOptions = this._expand.map(([attribute, func]) => {
-        const option = func ? `${attribute}(${func})` : attribute;
-        return option;
+        return func ? `${attribute}(${func})` : attribute;
       });
       options.push(`$expand=${expandOptions.join(',')}`);
     }
