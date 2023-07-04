@@ -4,10 +4,10 @@ import { RequestFetcherImpl } from '../RequestFetcher/RequestFetcherImpl';
 /**
  * RequestBuilderImpl
  *
- * @category RequestBuilderImpl
+ * @category RequestBuilder
  * @internal
- * @description Default implementation of the RequestBuilderImpl interface
- * @see {@link RequestBuilderImpl} - RequestBuilderImpl interface
+ * @description Default implementation of the RequestBuilder interface
+ * @see {@link RequestBuilder} - RequestBuilderImpl interface
  */
 export class RequestBuilderImpl implements RequestBuilder {
   /**

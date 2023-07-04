@@ -1,6 +1,6 @@
 /**
  * RequestBuilderImpl
- * @category RequestBuilderImpl
+ * @category RequestBuilder
  * @description Interface for the RequestBuilderImpl
  * @internal
  * @see {@link RequestBuilderImpl} - Default implementation
