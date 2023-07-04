@@ -273,15 +273,13 @@ export class RequestBuilderImpl implements RequestBuilder {
     }
 
     if (this._orderby) {
-      options.push(`$orderby=${this._orderby[0]} ${this._orderby[1]}`);
+      const [field, direction] = this._orderby;
+      options.push(`$orderby=${field} ${direction}`);
     }
 
     if (this._expand.length > 0) {
-      const expandOptions = this._expand.map((expand) => {
-        let option = expand[0];
-        if (expand[1]) {
-          option += `(${expand[1]})`;
-        }
+      const expandOptions = this._expand.map(([attribute, func]) => {
+        const option = func ? `${attribute}(${func})` : attribute;
         return option;
       });
       options.push(`$expand=${expandOptions.join(',')}`);
@@ -292,7 +290,7 @@ export class RequestBuilderImpl implements RequestBuilder {
     }
 
     if (this._filter.length > 0) {
-      const filterOptions = this._filter.map((filter) => filter[0]);
+      const filterOptions = this._filter.map(([expression]) => expression);
       options.push(`$filter=${filterOptions.join(' and ')}`);
     }
 
@@ -301,7 +299,7 @@ export class RequestBuilderImpl implements RequestBuilder {
     }
 
     if (options.length > 0) {
-      request += '?' + options.join('&');
+      request += `?${options.join('&')}`;
     }
 
     return request;
