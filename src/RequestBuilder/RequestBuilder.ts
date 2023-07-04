@@ -155,7 +155,7 @@ export interface RequestBuilder {
 
   /**
    * Skip the first n results
-   * @param skip The amount of results to skip (0..n)
+   * @param skip The amount of results to skip (1..n)
    * @returns The RequestBuilderImpl
    *
    * @example
