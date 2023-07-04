@@ -1,5 +1,5 @@
 import { RequestBuilder } from './RequestBuilder';
-import fetch from 'cross-fetch';
+import { RequestFetcherImpl } from '../RequestFetcher/RequestFetcherImpl';
 
 /**
  * RequestBuilderImpl
@@ -309,8 +309,6 @@ export class RequestBuilderImpl implements RequestBuilder {
    * @category Resolve functions
    */
   async request(): Promise<any> {
-    return await fetch(this.build()).then((response) => {
-      return response.json();
-    });
+    return new RequestFetcherImpl(this).requestFetch();
   }
 }
